@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Reminder App</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+<body>
+<div clas="container">
+    <h1 style="color: blue; font-size: 46px;">Task Reminder Form </h1>
+    <hr>
+    <h2>Save Task</h2>
+    <form action="#" th:action="@{/saveTask}" th:object="${task}" method="POST">
+
+
+        <input type="text" th:field="*{taskName}" placeholder="Enter Task name" class="form-control mb-4 col-4">
+        <textarea type="text" th:field="*{description}" placeholder="Task Description" class="form-control mb-4 col-4"> </textarea>
+        <input type="datetime-local" th:field="*{date}" placeholder="Date " class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">Submit Task</button>
+
+    </form>
+    <hr>
+    <a th:href="@{/}">Back to Home</a>
+</div>
+
+</body>
+</html>
