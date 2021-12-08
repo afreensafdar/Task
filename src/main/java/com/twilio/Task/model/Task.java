@@ -1,6 +1,5 @@
 package com.twilio.Task.model;
 
-
 import javax.persistence.*;
 import java.sql.Time;
 import java.util.Date;
@@ -27,6 +26,8 @@ public class Task {
 
     @Column (name="Prority")
     private String prority;
+
+   //Getter and Setter
 
     public long getId() {
         return id;

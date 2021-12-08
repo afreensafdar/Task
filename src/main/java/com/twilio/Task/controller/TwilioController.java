@@ -1,6 +1,7 @@
 package com.twilio.Task.controller;
 
 import com.twilio.Task.TaskApplication;
+import com.twilio.Task.model.Task;
 import com.twilio.Task.twilio.SmsRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -23,12 +24,6 @@ public class TwilioController {
     public void sendSms(@Valid @RequestBody SmsRequest smsRequest) {
 
         service.sendSms(smsRequest);
-    }
-
-    @GetMapping("/")
-    public String viewHomePage(Model model) {
-        // model.addAttribute("listEmployees",employeeService.getAllEmployees());
-        return "index";
     }
 }
 
