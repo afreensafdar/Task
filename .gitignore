@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ###yml(Twilio)###
-.yml
+application.yml/
